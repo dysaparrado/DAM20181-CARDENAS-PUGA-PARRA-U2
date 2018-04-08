@@ -16,10 +16,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'archived-todos.html',
 })
 export class ArchivedTodosPage {
-
+ 
 public archivedTodos = [];
-  constructor() {
-
+  constructor(private todoService: TodoService,public navCtrl: NavController, public navParams: NavParams) {
+    
   }
 
+  ionViewDidLoad() {
+    this.archivedTodos =this.todoService.getArchivedTodos();
+  }
+  archiveTodo2(todoIndex){
+    this.todoService.archivedTodo(todoIndex);
+  }
+
+
 }
+
