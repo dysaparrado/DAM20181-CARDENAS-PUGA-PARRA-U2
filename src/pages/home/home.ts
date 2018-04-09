@@ -3,6 +3,7 @@ import { NavController,AlertController,reorderArray ,ToastController} from 'ioni
 import { ArchivedTodosPage} from "../archived-todos/archived-todos";
 import { TodoService } from '../../providers/todo-service/todo-service';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'

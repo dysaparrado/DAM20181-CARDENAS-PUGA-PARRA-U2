@@ -27,4 +27,22 @@ export class TodoService{
 
 
 
+  getArchivedTodos(){
+    return this.archivedTodos;
+  }
+
+  getTodos(){
+    return this.todos; 
+  }
+
+  addTodo(todoText){
+    this.todos.push(todoText);
+  }
+
+
+  editTodo(todo,todoIndex){
+
+    this.todos[todoIndex]= todo;
+  }
+
 }
